@@ -76,7 +76,7 @@ export default photosArray => {
         }
       });
 
-      let fileName = renameFile(URL, USER);
+      let fileName = renameFile(URL);
       let file = fs.createWriteStream(`${DIR}/${fileName}`);
 
       request.on('response', response => {
