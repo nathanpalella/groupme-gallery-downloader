@@ -30,7 +30,7 @@ function renameFile(fileUrl, userName) {
 
   let user = userName.split(' ').join('_');
 
-  return `${user}__${hash}${fileType}`;
+  return `${hash}${fileType}`;
 }
 
 /**
