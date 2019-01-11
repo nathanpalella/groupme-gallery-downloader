@@ -28,8 +28,6 @@ function renameFile(fileUrl, userName) {
   let hasFileType = possibleFileType && possibleFileType.length > 0;
   let fileType = hasFileType ? possibleFileType[0] : '';
 
-  let user = userName.split(' ').join('_');
-
   return `${hash}${fileType}`;
 }
 
@@ -58,7 +56,7 @@ export default photosArray => {
   // Recursive downloader
   let downloader = (arr, curr = 0) => {
     if (arr.length) {
-      let { url: URL, user: USER } = arr[0];
+      let {url: URL} = arr[0];
 
       if (!URL || typeof URL !== 'string') {
         arr = arr.splice(1, arr.length - 1);
